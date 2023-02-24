@@ -48,7 +48,7 @@ data:
 
     integrations:
       gitlab:
-        - host: "http://centos01.anillocal.com:8090"
+        - host: centos01.anillocal.com:8090
           token: ${GITLABB_TOKEN}
 
     proxy:
@@ -91,8 +91,8 @@ data:
               #  clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
 
     scaffolder:
-      github:
-        token: ${GITHUB_TOKEN}
+      gitlab:
+        token: ${GITLAB_TOKEN}
         visibility: public # or 'internal' or 'private'
 
     kubernetes:
