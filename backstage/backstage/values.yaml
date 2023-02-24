@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/raf-backstage-demo/backstage-app-demo:0d767bf447feb34068f3769fd34a6c4d8a9ed633
+  repository: ghcr.io/raf-backstage-demo/backstage-app-demo
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: main
