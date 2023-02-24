@@ -85,10 +85,10 @@ data:
             clientId:  ${AUTH_GITLAB_CLIENT_ID}
             clientSecret: ${AUTH_GITLAB_CLIENT_SECRET}
             audience: ${AUTH_GITLAB_CLIENT_AUDIENCE}
-        github:
-          development:
-            clientId: ${AUTH_GITHUB_CLIENT_ID}
-            clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+              #        github:
+              #development:
+              # clientId: ${AUTH_GITHUB_CLIENT_ID}
+              #  clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
 
     scaffolder:
       github:
