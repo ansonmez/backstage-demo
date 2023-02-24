@@ -48,7 +48,7 @@ data:
 
     integrations:
       gitlab:
-        - host: http://centos01.anillocal.com:8090
+        - host: "http://centos01.anillocal.com:8090"
           token: ${GITLABB_TOKEN}
 
     proxy:
