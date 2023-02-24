@@ -189,7 +189,8 @@ oc label secret github-oauth-config -n openshift-devspaces --overwrite=true app.
 oc annotate secret github-oauth-config -n openshift-devspaces --overwrite=true che.eclipse.org/oauth-scm-server=github
 oc create secret generic ocp-github-app-credentials -n openshift-config --from-literal=client_id=${ocp_github_client_id} --from-literal=clientSecret=${ocp_github_client_secret}
 oc new-project backstage
-oc create secret generic github-credentials -n backstage --from-literal=AUTH_GITHUB_CLIENT_ID=${backstage_github_client_id} --from-literal=AUTH_GITHUB_CLIENT_SECRET=${backstage_github_client_secret} --from-literal=GITHUB_TOKEN=${org_admin_pat} --from-literal=GITHUB_ORG=${github_organization}
+------oc create secret generic github-credentials -n backstage --from-literal=AUTH_GITHUB_CLIENT_ID=${backstage_github_client_id} --from-literal=AUTH_GITHUB_CLIENT_SECRET=${backstage_github_client_secret} --from-literal=GITHUB_TOKEN=${org_admin_pat} --from-literal=GITHUB_ORG=${github_organization}
+oc create secret generic gitlab-credentials -n backstage --from-literal=AUTH_GITHUB_CLIENT_ID=${backstage_gitlab_client_id} --from-literal=AUTH_GITLAB_CLIENT_SECRET=${backstage_gitlab_client_secret} --from-literal=GITLAB_TOKEN=${gitlab_org_admin_pat} --from-literal=GITLAB_ORG=${gitlab_organization}
 oc new-project actions-runner-system
 oc create secret generic controller-manager -n actions-runner-system --from-literal=github_app_id=${action_runner_github_app_id} --from-literal=github_app_installation_id=${action_runner_github_app_installation_id} --from-file=github_app_private_key=${action_runner_github_app_private_key_file_path}
 oc new-project group-sync-operator
